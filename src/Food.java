@@ -12,4 +12,7 @@ public class Food {
         return name;
     }
     
+    public double getPrice(){
+        return price;
+    }
 }
