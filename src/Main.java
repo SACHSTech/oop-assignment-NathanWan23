@@ -6,6 +6,8 @@ public class Main {
     static StringTokenizer st; 
     public static void main(String[] args) throws IOException{
 
+        int itemNum;
+        System.out.println("1. ")
     }
     static String next () throws IOException {
         while (st == null || ! st.hasMoreTokens())
