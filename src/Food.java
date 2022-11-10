@@ -8,5 +8,8 @@ public class Food {
         price = Price;
     }
 
+    public String getName(){
+        return name;
+    }
     
 }
