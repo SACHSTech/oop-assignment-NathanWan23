@@ -7,7 +7,15 @@ public class Main {
     public static void main(String[] args) throws IOException{
 
         int itemNum;
-        System.out.println("1. ")
+        System.out.println("BURGERS");
+        System.out.println("1| Morning Burger");
+        System.out.println("2| Stacked Burger");
+        System.out.println("3| Vegan Burger");
+        System.out.println("4| Chicken Burger");
+        System.out.println("SIDES");
+        System.out.println("5| Fries");
+        System.out.println("6| Waffle Fries"); 
+        System.out.println("7| Poutine");
     }
     static String next () throws IOException {
         while (st == null || ! st.hasMoreTokens())
