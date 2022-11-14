@@ -8,16 +8,20 @@ public class ChickenBurger extends Burger {
     
     String[] burgerToppings = {"lettuce", "Tomatoes", "Mayonnaise", "Pickles"};
     double burgerPrice = 7.99;
-    boolean crisy;
+    boolean crispy;
     int spiceLevel;
 
     public ChickenBurger(String Name, boolean isCrispy, int spice){
         super(Name, burgerToppings, burgerPrice);
-        this.crisy = isCrispy;
+        this.crispy = isCrispy;
         this.spiceLevel = spice; 
         
     }
 
-    this.get
+    public boolean getCrispy(){
+        return crispy;
+    }
+
+    
 }
 
