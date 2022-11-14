@@ -22,6 +22,8 @@ public class ChickenBurger extends Burger {
         return crispy;
     }
 
-    
+    public int getSpiceLevel(){
+        return spiceLevel;
+    }
 }
 
