@@ -10,7 +10,6 @@ public class Burger extends Food {
     public Burger(String Name, String[] toppings, double price){
         super(Name, price);
         /*super(Name, 5.99);
-        super(Name,10.99);
         (Name, 8.99);*/
         this.burgerToppings = toppings;
     }
