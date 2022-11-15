@@ -1,15 +1,15 @@
 public class StackedBurger extends Burger{
     
-    int layers;
+    int bunLayers;
     int beefPaties;
 
-    public StackedBurger(String Name, int Layers, int BeefPaties){
+    public StackedBurger(String Name, int BunLayers, int BeefPaties){
         super(Name, new String[] {"Cheese", "Ketchup", "Mayonnaise", "Bacon"}, 12.99);
-        this.layers = Layers;
+        this.bunLayers = BunLayers;
         this.beefPaties = BeefPaties; 
     }
     public int getLayers(){
-        return layers;
+        return bunLayers;
     }
 
     public int beefPaties(){
