@@ -10,4 +10,8 @@ public class Sides extends Food{
         this.size = sideSize;
     }
 
+    public String getSize(){
+        return size;
+    }
+
 }
