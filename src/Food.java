@@ -1,4 +1,4 @@
-public class Food {
+public abstract class Food {
     
     private String name;
     private double price;
