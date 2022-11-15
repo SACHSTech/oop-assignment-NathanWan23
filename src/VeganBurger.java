@@ -8,4 +8,9 @@ public class VeganBurger extends Burger{
         this.beyondMeat = isBeyondMeat;
         this.lettuceBun = isLettuceBun; 
     }
+
+    public boolean getBeyondMeat(){
+        return beyondMeat;
+    }
+
 }

@@ -8,6 +8,7 @@ public class StackedBurger extends Burger{
         this.bunLayers = BunLayers;
         this.beefPaties = BeefPaties; 
     }
+    
     public int getLayers(){
         return bunLayers;
     }
