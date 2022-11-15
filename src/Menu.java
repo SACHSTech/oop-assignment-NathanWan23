@@ -16,8 +16,10 @@ public class Menu {
         return foodList;
     }
 
-    public int getNumofItem(){
+    public int getNumOfItem(){
         return num;
     }
+
+    public int 
 
 }
