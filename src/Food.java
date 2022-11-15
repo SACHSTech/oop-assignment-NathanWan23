@@ -3,9 +3,13 @@ public class Food {
     private String name;
     private double price;
 
-    public Food(String Name, Double Price){
-        name = Name;
-        price = Price;
+    public Food(String foodName, Double foodPrice){
+        name = foodName;
+        price = foodPrice;
+    }
+
+    public Food(String foodName){
+        name = foodName;
     }
 
     public String getName(){
