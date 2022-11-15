@@ -12,5 +12,9 @@ public class VeganBurger extends Burger{
     public boolean getBeyondMeat(){
         return beyondMeat;
     }
+    
+    public boolean getLettuceBun(){
+        return lettuceBun;
+    }
 
 }
