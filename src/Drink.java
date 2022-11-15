@@ -9,4 +9,8 @@ public class Drink extends Food {
         else setPrice(3.99);
         this.size = drinkSize;
     }
+
+    public String getSize(){
+        return size;
+    }
 }
