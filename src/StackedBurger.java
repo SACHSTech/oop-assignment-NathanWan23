@@ -12,4 +12,7 @@ public class StackedBurger extends Burger{
         return layers;
     }
 
+    public int beefPaties(){
+        return beefPaties;
+    }
 }
