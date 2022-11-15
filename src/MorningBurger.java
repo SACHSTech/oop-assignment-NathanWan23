@@ -13,4 +13,8 @@ public class MorningBurger extends Burger{
         return bagelBun;
     }
 
+    public boolean getSausageMeat(){
+        return sausageMeat;
+    }
+
 }
