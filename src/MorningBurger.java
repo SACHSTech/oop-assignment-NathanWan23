@@ -8,5 +8,9 @@ public class MorningBurger extends Burger{
         this.bagelBun = isBagelBun;
         this.sausageMeat = isSausageMeat; 
     }
-    
+
+    public boolean getBagelBun(){
+        return bagelBun;
+    }
+
 }
