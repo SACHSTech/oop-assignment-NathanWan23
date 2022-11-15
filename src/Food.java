@@ -19,4 +19,8 @@ public class Food {
     public double getPrice(){
         return price;
     }
+
+    public double setPrice(){
+        
+    }
 }
