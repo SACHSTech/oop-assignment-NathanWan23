@@ -10,4 +10,10 @@ public class Menu {
         foodList.add(itemFood);
         
     }
+
+    public ArrayList<Food> getfoodList(){
+        return foodList;
+    }
+
+
 }
