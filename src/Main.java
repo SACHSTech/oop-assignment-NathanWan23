@@ -19,6 +19,9 @@ public class Main {
         boolean isBeyondMeat = true;
         boolean isLettuceBun = true;
 
+        boolean isBagelBun = true;
+        boolean isSauasgeMeat = true; 
+
         System.out.println("BURGERS");
         System.out.println("1 | Morning Burger");
         System.out.println("2 | Stacked Burger");
@@ -42,11 +45,11 @@ public class Main {
         if(itemNum > 0 && itemNum < 5){
 
             if (itemNum == 1) {
-                System.out.println("Chicken Burger: ");
-                System.out.println("- Toppings: Lettuce, Tomatoes, Mayonnaise, Pickels" );
-                System.out.println("- Choice of either crispy or non-crispy");
-                System.out.println("- Can be spicy up to 3 levels");
-                System.out.println("Price: $7.99");
+                System.out.println("Morning Burger: ");
+                System.out.println("- Toppings: Cheese, Egg, Mayonnaise, Hash brown, bacon" );
+                System.out.println("- Choice of either bagel bun or potato bun");
+                System.out.println("- Choice of either sausge meat or beef meat");
+                System.out.println("Price: $5.99");
 
                 while(going == true){
                     System.out.println("Would you like to add item to order? (Y or N)");
@@ -54,7 +57,7 @@ public class Main {
                     if(addToCart == 'Y'){
 
                         while(going == true){
-                            System.out.println("Would you like crispy or non-crispy? (Y or N)");
+                            System.out.println("Would you like the bagel bun? (Y or N)");
                             if(readCharacter() == 'Y'){
                                 isCrispy = true; 
                                 break;
