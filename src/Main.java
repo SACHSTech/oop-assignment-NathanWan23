@@ -20,7 +20,7 @@ public class Main {
         boolean isLettuceBun = true;
 
         boolean isBagelBun = true;
-        boolean isSauasgeMeat = true; 
+        boolean isSausageMeat = true; 
 
         System.out.println("BURGERS");
         System.out.println("1 | Morning Burger");
@@ -59,24 +59,28 @@ public class Main {
                         while(going == true){
                             System.out.println("Would you like the bagel bun? (Y or N)");
                             if(readCharacter() == 'Y'){
-                                isCrispy = true; 
+                                isBagelBun = true; 
                                 break;
                             } 
                             else if (readCharacter() == 'N') {
-                                isCrispy = false; 
+                                isBagelBun = false; 
                                 break;
                             } else error();
                         }
                         while(going == true){
-                            System.out.println("What spice level would you like? (0-3)");
-                            if(readInt() > -1 && readInt() < 4){
-                                spice = readInt();
+                            System.out.println("Would you like the sausage meat? (Y or N)");
+                            if(readCharacter() == 'Y'){
+                                isSausageMeat = true; 
+                                break;
+                            } 
+                            else if (readCharacter() == 'N') {
+                                isSausageMeat = false; 
                                 break;
                             } else error();
                         }
 
                         System.out.println("Name for burger: ");
-                        Burger ChickenBurger = new ChickenBurger(readLine(), isCrispy, spice);
+                        Burger MorningBurger = new MorningBurger(readLine(), isBagelBun, isSausageMeat);
 
                     } else if(addToCart == 'N'){
                         break;
