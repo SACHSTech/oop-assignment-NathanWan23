@@ -10,8 +10,15 @@ public class Main {
         boolean going = true; 
         char addToCart;
 
-        boolean isCrispy;
-        int spice;
+        boolean isCrispy = true;
+        int spice = 0;
+
+        int buns = 0; 
+        int beef = 1; 
+
+        boolean isBeyondMeat = true;
+        boolean isLettuceBun = true;
+
         System.out.println("BURGERS");
         System.out.println("1 | Morning Burger");
         System.out.println("2 | Stacked Burger");
@@ -45,20 +52,147 @@ public class Main {
                     System.out.println("Would you like to add item to order? (Y or N)");
                     addToCart = readCharacter();
                     if(addToCart == 'Y'){
+
                         while(going == true){
                             System.out.println("Would you like crispy or non-crispy? (Y or N)");
-                            if(readCharacter() == 'Y') isCrispy = true;
-                            else if (readCharacter() == 'N') isCrispy = false;
-                            else System.out.println("Error Please enter again.")
+                            if(readCharacter() == 'Y'){
+                                isCrispy = true; 
+                                break;
+                            } 
+                            else if (readCharacter() == 'N') {
+                                isCrispy = false; 
+                                break;
+                            } else error();
                         }
-                        
+                        while(going == true){
+                            System.out.println("What spice level would you like? (0-3)");
+                            if(readInt() > -1 && readInt() < 4){
+                                spice = readInt();
+                                break;
+                            } else error();
+                        }
+
+                        System.out.println("Name for burger: ");
+                        Burger ChickenBurger = new ChickenBurger(readLine(), isCrispy, spice);
 
                     } else if(addToCart == 'N'){
                         break;
                     } else error();
                 }
-                
-                
+            } else if(itemNum == 2){
+                System.out.println("Stacked Burger: ");
+                System.out.println("- Toppings: Cheese, Ketchup, Mayonnaise, Bacon" );
+                System.out.println("- Can be up to 5 beef paties");
+                System.out.println("- Can be up to 4 bun layers");
+                System.out.println("Price: $12.99");
+
+                while(going == true){
+                    System.out.println("Would you like to add item to order? (Y or N)");
+                    addToCart = readCharacter();
+                    if(addToCart == 'Y'){
+
+                        while(going == true){
+                            System.out.println("How many beef paties would you like (1-5)");
+                            if(readInt() > 0 && readInt() < 6){
+                                beef = readInt(); 
+                                break;
+                            } else error();
+                        }
+                        while(going == true){
+                            System.out.println("How many buns would you like? (0-4)");
+                            if(readInt() > -1 && readInt() < 5){
+                                buns = readInt();
+                                break;
+                            } else error();
+                        }
+
+                        System.out.println("Name for burger: ");
+                        Burger StackedBurger = new StackedBurger(readLine(), buns, beef);
+
+                    } else if(addToCart == 'N'){
+                        break;
+                    } else error();
+                }
+            } else if (itemNum == 3) {
+                System.out.println("Vegan Burger: ");
+                System.out.println("- Toppings: Ketchup, Mayonnaise, Lettuce, Tomatoes, Grilled onions, Sauted Mushrooms");
+                System.out.println("- Choice of either beyond meat or non-beyond meat");
+                System.out.println("- Choice of either lettuce bun or potato bun");
+                System.out.println("Price: $7.99");
+
+                while(going == true){
+                    System.out.println("Would you like to add item to order? (Y or N)");
+                    addToCart = readCharacter();
+                    if(addToCart == 'Y'){
+
+                        while(going == true){
+                            System.out.println("Would you like beyond meat or non-beyond meat? (Y or N)");
+                            if(readCharacter() == 'Y'){
+                                isBeyondMeat = true; 
+                                break;
+                            } 
+                            else if (readCharacter() == 'N') {
+                                isBeyondMeat = false; 
+                                break;
+                            } else error();
+                        }
+                        while(going == true){
+                            System.out.println("Would you like lettuce bun? (Y or N)");
+                            if(readCharacter() == 'Y'){
+                                isLettuceBun = true; 
+                                break;
+                            } 
+                            else if (readCharacter() == 'N') {
+                                isLettuceBun = false; 
+                                break;
+                            } else error();
+                        }
+
+                        System.out.println("Name for burger: ");
+                        Burger VeganBurger = new VeganBurger(readLine(), isBeyondMeat, isLettuceBun);
+
+                    } else if(addToCart == 'N'){
+                        break;
+                    } else error();
+                }
+            } else if (itemNum == 4) {
+                System.out.println("Chicken Burger: ");
+                System.out.println("- Toppings: Lettuce, Tomatoes, Mayonnaise, Pickels" );
+                System.out.println("- Choice of either crispy or non-crispy");
+                System.out.println("- Can be spicy up to 3 levels");
+                System.out.println("Price: $7.99");
+
+                while(going == true){
+                    System.out.println("Would you like to add item to order? (Y or N)");
+                    addToCart = readCharacter();
+                    if(addToCart == 'Y'){
+
+                        while(going == true){
+                            System.out.println("Would you like crispy or non-crispy? (Y or N)");
+                            if(readCharacter() == 'Y'){
+                                isCrispy = true; 
+                                break;
+                            } 
+                            else if (readCharacter() == 'N') {
+                                isCrispy = false; 
+                                break;
+                            } else error();
+                        }
+                        while(going == true){
+                            System.out.println("What spice level would you like? (0-3)");
+                            if(readInt() > -1 && readInt() < 4){
+                                spice = readInt();
+                                break;
+                            } else error();
+                        }
+
+                        System.out.println("Name for burger: ");
+                        Burger ChickenBurger = new ChickenBurger(readLine(), isCrispy, spice);
+
+                    } else if(addToCart == 'N'){
+                        break;
+                    } else error();
+                }
             }
         } else if(itemNum > 4 && itemNum < 8){
 
