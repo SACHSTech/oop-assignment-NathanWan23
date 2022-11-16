@@ -205,9 +205,7 @@ public class Main {
 
         } else if(itemNum > 7 && itemNum < 12){
 
-        } else {
-            System.out.println("Error. Enter item number again.");
-        }
+        } else error();
     }
     }
     static String next () throws IOException {
