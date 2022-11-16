@@ -4,7 +4,7 @@ public class ChickenBurger extends Burger {
     int spiceLevel;
 
     public ChickenBurger(String Name, boolean isCrispy, int spice){
-        super(Name, new String[] {"lettuce", "Tomatoes", "Mayonnaise", "Pickles"}, 7.99);
+        super(Name, new String[] {"Lettuce", "Tomatoes", "Mayonnaise", "Pickles"}, 7.99);
         this.crispy = isCrispy;
         this.spiceLevel = spice; 
         
