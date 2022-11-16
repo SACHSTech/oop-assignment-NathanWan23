@@ -5,9 +5,8 @@ public class Order {
     ArrayList<Food> foodList = new ArrayList<Food>();
     Food itemFood;
     int num = 0;
-    double totalPrice = 0;
     double subTotal = 0;
-    double tax = 0;
+    
 
     public Order(Food food){
         itemFood = food;
@@ -27,5 +26,13 @@ public class Order {
     public double getSubTotal(){
         return subTotal;
     } 
+
+    public double getTax(){
+        return subTotal * 0.13;
+    }
+
+    public double getTotalPrice(){
+        return subTotal * 1.13;
+    }
 
 }
