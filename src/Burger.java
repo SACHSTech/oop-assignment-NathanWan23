@@ -1,5 +1,6 @@
 public class Burger extends Food {
     
+    // Declair variables
     String[] burgerToppings;
 
     public Burger(String Name, String[] toppings, double price){
