@@ -22,10 +22,20 @@ public class ChickenBurger extends Burger {
         
     }
 
+    /**
+     * Returns boolean value if the chicekn is crispy or not.
+     * 
+     * @return boolean variable crispy, which represents if the chicken is crispy or grilled
+     */
     public boolean getCrispy(){
         return crispy;
     }
 
+    /**
+     * Returns int value for spice level.
+     * 
+     * @return int variable spiceLevel, which represents the spice level of the chicken
+     */
     public int getSpiceLevel(){
         return spiceLevel;
     }
