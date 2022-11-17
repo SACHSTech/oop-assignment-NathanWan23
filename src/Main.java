@@ -136,6 +136,7 @@ public class Main {
 
                         System.out.println("Name for burger: ");
                         Burger StackedBurger = new StackedBurger(readLine(), buns, beef);
+                        break;
 
                     } else if(addToCart == 'N'){
                         break;
@@ -178,6 +179,7 @@ public class Main {
 
                         System.out.println("Name for burger: ");
                         Burger VeganBurger = new VeganBurger(readLine(), isBeyondMeat, isLettuceBun);
+                        break;
 
                     } else if(addToCart == 'N'){
                         break;
@@ -216,6 +218,7 @@ public class Main {
 
                         System.out.println("Name for burger: ");
                         Burger ChickenBurger = new ChickenBurger(readLine(), isCrispy, spice);
+                        break;
 
                     } else if(addToCart == 'N'){
                         break;
