@@ -481,12 +481,12 @@ public class Main {
         }  */
         System.out.println(foodList.get(i));
         System.out.println(foodList.get(i).getName());
-        System.out.println(foodList.get(i).getPrice());
+        System.out.println("$ " + foodList.get(i).getPrice());
     }
     System.out.println("----------");
-    System.out.println("Sub-Total: " + order.getSubTotal());
-    System.out.println("Tax: " + String.format("%.2f",order.getTax()));
-    System.out.println("Total: " + String.format("%.2f",order.getTotalPrice()));
+    System.out.println("Sub-Total: $" + String.format("%.2f",order.getSubTotal()));
+    System.out.println("Tax: $" + String.format("%.2f",order.getTax()));
+    System.out.println("Total: $" + String.format("%.2f",order.getTotalPrice()));
     }
 
     static String next () throws IOException {
