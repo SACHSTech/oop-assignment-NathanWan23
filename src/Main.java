@@ -27,7 +27,7 @@ public class Main {
 
         Order order = new Order();
 
-        String size;
+        String size = "Small";
 
         System.out.println("BURGERS");
         System.out.println("1 | Morning Burger");
@@ -246,7 +246,7 @@ public class Main {
                     if(addToCart == 'Y'){
 
                         while(going == true){
-                            System.out.println("What size would you like (S or M or L");
+                            System.out.println("What size would you like (Small or Medium or Large");
                             size = readLine();
                             if(size.equals("Small")) break;
                             else if (size.equals("Medium")) break;
@@ -275,7 +275,7 @@ public class Main {
                     if(addToCart == 'Y'){
 
                         while(going == true){
-                            System.out.println("What size would you like (S or M or L");
+                            System.out.println("What size would you like (Small or Medium or Large");
                             size = readLine();
                             if(size.equals("Small")) break;
                             else if (size.equals("Medium")) break;
@@ -306,16 +306,16 @@ public class Main {
                     if(addToCart == 'Y'){
 
                         while(going == true){
-                            System.out.println("What size would you like (S or M or L");
+                            System.out.println("What size would you like (Small or Medium or Large");
                             size = readLine();
                             if(size.equals("Small")) break;
                             else if (size.equals("Medium")) break;
                             else if(size.equals("Large")) break;
                             else error();
                         }
-                        System.out.println("Name for waffle fries: ");
-                        Sides waffleFries = new Sides(readLine(), size);
-                        order.addFoodItem(waffleFries);   
+                        System.out.println("Name for poutine: ");
+                        Sides poutine = new Sides(readLine(), size);
+                        order.addFoodItem(poutine);   
                         break;
 
                     } else if(addToCart == 'N'){
@@ -327,9 +327,13 @@ public class Main {
 
         } else if(itemNum > 7 && itemNum < 12){
 
+            if(itemNum == 8){
+
+            }
+
         } else error();
         while(going  == true){
-            System.out.println("Would you like to keep ordering / browsing? (yOrN");
+            System.out.println("Would you like to keep ordering / browsing? (yOrN)");
             yOrN = readCharacter();
             if (yOrN == 'Y'){
                 break;
@@ -337,10 +341,11 @@ public class Main {
                 going = false;
                 break;
             } else error();
-        }
+        } 
     }
 
-    System.out.println(Order.getFoodList());
+    ArrayList<Food> foodList = order.getFoodList(); 
+    System.out.println(foodList);
     }
 
     static String next () throws IOException {
