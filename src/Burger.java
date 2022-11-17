@@ -10,9 +10,9 @@ public class Burger extends Food {
     /**
      * Constructor - creates a new instance of a burger.
      * 
-     * @param name - the name of the burger
-     * @param toppings - toppings on the burger
-     * @param price - price of the burger
+     * @param String name - the name of the burger
+     * @param String[] toppings - toppings on the burger
+     * @param double price - price of the burger
      */
     public Burger(String name, String[] toppings, double price){
         super(name, price);
