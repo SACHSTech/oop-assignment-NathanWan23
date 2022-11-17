@@ -28,10 +28,20 @@ public abstract class Food {
         name = foodName;
     }
 
+    /**
+     * Returns string of the name
+     * 
+     * @return String name, which represents the name of the food
+     */
     public String getName(){
         return name;
     }
-    
+
+    /**
+     * Returns a double value of the price of the food item 
+     * 
+     * @return double price, which represents the price of the food item
+     */
     public double getPrice(){
         return price;
     }
