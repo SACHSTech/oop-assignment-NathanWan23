@@ -25,6 +25,8 @@ public class Main {
         char yOrN;
         int numOption;
 
+        Order order = new Order();
+
         System.out.println("BURGERS");
         System.out.println("1 | Morning Burger");
         System.out.println("2 | Stacked Burger");
@@ -94,7 +96,7 @@ public class Main {
 
                         System.out.println("Name for burger: ");
                         Burger MorningBurger = new MorningBurger(readLine(), isBagelBun, isSausageMeat);
-                        Order order = new Order(MorningBurger);
+                        order.addFoodItem(MorningBurger);
                         break;
 
                     } else if(addToCart == 'N'){
@@ -115,21 +117,24 @@ public class Main {
 
                         while(going == true){
                             System.out.println("How many beef paties would you like (1-5)");
-                            if(readInt() > 0 && readInt() < 6){
-                                beef = readInt(); 
+                            numOption = readInt();
+                            if(numOption > 0 && numOption < 6){
+                                beef = numOption;
                                 break;
                             } else error();
                         }
                         while(going == true){
                             System.out.println("How many buns would you like? (0-4)");
-                            if(readInt() > -1 && readInt() < 5){
-                                buns = readInt();
+                            numOption = readInt();
+                            if(numOption > -1 && numOption < 5){
+                                buns = numOption;
                                 break;
                             } else error();
                         }
 
                         System.out.println("Name for burger: ");
                         Burger StackedBurger = new StackedBurger(readLine(), buns, beef);
+                        order.addFoodItem(StackedBurger);
                         break;
 
                     } else if(addToCart == 'N'){
@@ -235,7 +240,10 @@ public class Main {
             } else error();
         }
     }
+
+    System.out.println(Order.getFoodList());
     }
+
     static String next () throws IOException {
         while (st == null || ! st.hasMoreTokens())
             st = new StringTokenizer(br.readLine().trim());

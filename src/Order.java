@@ -3,19 +3,21 @@ import java.io.*;
 public class Order {
  
     ArrayList<Food> foodList = new ArrayList<Food>();
-    Food itemFood;
-    int num = 0;
-    double subTotal = 0;
+    int num;
+    double subTotal;
     
 
-    public Order(Food food){
-        itemFood = food;
+    public Order(){
+        subTotal = 0;
+        num = 0;
+    }
+    public void addFoodItem(Food itemFood){
         foodList.add(itemFood);
         num++;
-        subTotal = subTotal + food.getPrice();
+        subTotal = subTotal + itemFood.getPrice();
     }
 
-    public ArrayList<Food> getfoodList(){
+    public ArrayList<Food> getFoodList(){
         return foodList;
     }
 
