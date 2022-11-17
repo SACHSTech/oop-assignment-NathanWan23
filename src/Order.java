@@ -21,6 +21,10 @@ public class Order {
         return foodList;
     }
 
+    public Food getFood(int n){
+        return foodList.get(n);
+    }
+
     public int getNumOfItem(){
         return num;
     }

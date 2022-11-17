@@ -6,6 +6,8 @@ public class Main {
     static StringTokenizer st; 
     public static void main(String[] args) throws IOException{
 
+        ArrayList<String> foodType = new ArrayList<String>();
+
         int itemNum;
         boolean going = true; 
         char addToCart;
@@ -48,25 +50,25 @@ public class Main {
         System.out.println("-------------------");*/
 
         while(going == true){
-            System.out.println("-------------------")
-        System.out.println("BURGERS");
-        System.out.println("1 | Morning Burger");
-        System.out.println("2 | Stacked Burger");
-        System.out.println("3 | Vegan Burger");
-        System.out.println("4 | Chicken Burger");
-        System.out.println("SIDES");
-        System.out.println("5 | Fries");
-        System.out.println("6 | Waffle Fries"); 
-        System.out.println("7 | Poutine");
-        System.out.println("Drinks");
-        System.out.println("8 | Fruitopea");
-        System.out.println("9 | Dr. Pepper"); 
-        System.out.println("10| Coca-Cola");
-        System.out.println("11| Root Beer");
-        System.out.println("-------------------");
+            System.out.println("-------------------");
+            System.out.println("BURGERS");
+            System.out.println("1 | Morning Burger");
+            System.out.println("2 | Stacked Burger");
+            System.out.println("3 | Vegan Burger");
+            System.out.println("4 | Chicken Burger");
+            System.out.println("SIDES");
+            System.out.println("5 | Fries");
+            System.out.println("6 | Waffle Fries"); 
+            System.out.println("7 | Poutine");
+            System.out.println("Drinks");
+            System.out.println("8 | Fruitopia");
+            System.out.println("9 | Dr. Pepper"); 
+            System.out.println("10| Coca-Cola");
+            System.out.println("11| Root Beer");
+            System.out.println("-------------------");
 
-        System.out.print("Enter the item you would like to view: ");
-        itemNum = readInt();
+            System.out.print("Enter the item you would like to view: ");
+            itemNum = readInt();
 
         if(itemNum > 0 && itemNum < 5){
 
@@ -116,8 +118,9 @@ public class Main {
                         } 
 
                         System.out.println("Name for burger: ");
-                        Burger MorningBurger = new MorningBurger(readLine(), isBagelBun, isSausageMeat);
-                        order.addFoodItem(MorningBurger);
+                        Burger morningBurger = new MorningBurger(readLine(), isBagelBun, isSausageMeat);
+                        order.addFoodItem(morningBurger);
+                        foodType.add("Morning Burger");
                         break;
 
                     } else if(addToCart == 'N'){
@@ -154,8 +157,9 @@ public class Main {
                         }
 
                         System.out.println("Name for burger: ");
-                        Burger StackedBurger = new StackedBurger(readLine(), buns, beef);
-                        order.addFoodItem(StackedBurger);
+                        Burger stackedBurger = new StackedBurger(readLine(), buns, beef);
+                        order.addFoodItem(stackedBurger);
+                        foodType.add("Stacked Burger");
                         break;
 
                     } else if(addToCart == 'N'){
@@ -200,8 +204,9 @@ public class Main {
                         }
 
                         System.out.println("Name for burger: ");
-                        Burger VeganBurger = new VeganBurger(readLine(), isBeyondMeat, isLettuceBun);
-                        order.addFoodItem(VeganBurger);
+                        Burger veganBurger = new VeganBurger(readLine(), isBeyondMeat, isLettuceBun);
+                        order.addFoodItem(veganBurger);
+                        foodType.add("Vegan Burger");
                         break;
 
                     } else if(addToCart == 'N'){
@@ -242,8 +247,9 @@ public class Main {
                         }
 
                         System.out.println("Name for burger: ");
-                        Burger ChickenBurger = new ChickenBurger(readLine(), isCrispy, spice);
-                        order.addFoodItem(ChickenBurger);
+                        Burger chickenBurger = new ChickenBurger(readLine(), isCrispy, spice);
+                        order.addFoodItem(chickenBurger);
+                        foodType.add("Chicken Burger");
                         break;
 
                     } else if(addToCart == 'N'){
@@ -275,6 +281,7 @@ public class Main {
                         System.out.println("Name for fries: ");
                         Sides fries = new Sides(readLine(), size);
                         order.addFoodItem(fries);   
+                        foodType.add("Fries");
                         break;
 
                     } else if(addToCart == 'N'){
@@ -304,6 +311,7 @@ public class Main {
                         System.out.println("Name for waffle fries: ");
                         Sides waffleFries = new Sides(readLine(), size);
                         order.addFoodItem(waffleFries);   
+                        foodType.add("Waffle Fries");
                         break;
 
                     } else if(addToCart == 'N'){
@@ -335,6 +343,7 @@ public class Main {
                         System.out.println("Name for poutine: ");
                         Sides poutine = new Sides(readLine(), size);
                         order.addFoodItem(poutine);   
+                        foodType.add("Poutine");
                         break;
 
                     } else if(addToCart == 'N'){
@@ -365,9 +374,10 @@ public class Main {
                             else if(size.equals("Large")) break;
                             else error();
                         }
-                        System.out.println("Name for Fuitopea: ");
-                        Drink fuitopea = new Drink(readLine(), size);
-                        order.addFoodItem(fuitopea);   
+                        System.out.println("Name for Fuitopia: ");
+                        Drink fruitopia = new Drink(readLine(), size);
+                        order.addFoodItem(fruitopia);   
+                        foodType.add("Fruitopea");
                         break;
 
                     } else if(addToCart == 'N'){
@@ -481,6 +491,9 @@ public class Main {
 
     for(int i = 0; i < foodList.size(); i++){
         System.out.println("---------");
+        if(order.getFood(i) == VeganBurger){
+
+        }  
         System.out.println(foodList.get(i));
         System.out.println(foodList.get(i).getName());
         System.out.println(foodList.get(i).getPrice());
