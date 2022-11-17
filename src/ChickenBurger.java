@@ -11,9 +11,9 @@ public class ChickenBurger extends Burger {
     /**
      * Constructor - creates a new instance of a burger.
      * 
-     * @param name - the name of the chicken burger
-     * @param isCrispy - if the chicken is crispy or grilled
-     * @param spice - what the spice level will be  
+     * @param String name - the name of the chicken burger
+     * @param boolean isCrispy - if the chicken is crispy or grilled
+     * @param int spice - what the spice level will be  
      */
     public ChickenBurger(String name, boolean isCrispy, int spice){
         super(name, new String[] {"Lettuce", "Tomatoes", "Mayonnaise", "Pickles"}, 7.99);
