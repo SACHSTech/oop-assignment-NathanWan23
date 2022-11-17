@@ -22,7 +22,8 @@ public class Main {
         boolean isBagelBun = true;
         boolean isSausageMeat = true; 
 
-        char c;
+        char yOrNOption;
+        int numOption;
 
         System.out.println("BURGERS");
         System.out.println("1 | Morning Burger");
@@ -60,32 +61,24 @@ public class Main {
 
                         while(going == true){
                             System.out.println("Would you like the bagel bun? (Y or N)");
-                            /*if(readCharacter() == 'Y'){
+                            yOrNOption = readCharacter();
+                            if(yOrNOption == 'Y'){
                                 isBagelBun = true; 
                                 break;
                             } 
-                            else if (readCharacter() == 'N') {
-                                isBagelBun = false; 
-                                break;
-                            } else error();*/
-                            c = readCharacter();
-                            if(c == 'Y'){
-                                isBagelBun = true; 
-                                break;
-                            } 
-                            else if (c == 'N') {
+                            else if (yOrNOption == 'N') {
                                 isBagelBun = false; 
                                 break;
                             } else error();
                         }
                         while(going == true){
                             System.out.println("Would you like the sausage meat? (Y or N)");
-                            c = readCharacter();
-                            if(c == 'Y'){
+                            yOrNOption = readCharacter();
+                            if(yOrNOption == 'Y'){
                                 isSausageMeat = true; 
                                 break;
                             } 
-                            else if (c == 'N') {
+                            else if (yOrNOption == 'N') {
                                 isSausageMeat = false; 
                                 break;
                             } else error();
