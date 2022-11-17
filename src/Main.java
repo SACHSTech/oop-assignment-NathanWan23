@@ -377,7 +377,7 @@ public class Main {
                         System.out.println("Name for Fuitopia: ");
                         Drink fruitopia = new Drink(readLine(), size);
                         order.addFoodItem(fruitopia);   
-                        foodType.add("Fruitopea");
+                        foodType.add("Fruitopia");
                         break;
 
                     } else if(addToCart == 'N'){
@@ -407,6 +407,7 @@ public class Main {
                         System.out.println("Name for Dr. Pepper: ");
                         Drink drPepper = new Drink(readLine(), size);
                         order.addFoodItem(drPepper);   
+                        foodType.add("Dr Pepper");
                         break;
 
                     } else if(addToCart == 'N'){
@@ -436,6 +437,7 @@ public class Main {
                         System.out.println("Name for Coca-Cola: ");
                         Drink cocaCola = new Drink(readLine(), size);
                         order.addFoodItem(cocaCola);   
+                        foodType.add("Coca Cola");
                         break;
 
                     } else if(addToCart == 'N'){
@@ -465,6 +467,7 @@ public class Main {
                         System.out.println("Name for Root Beer: ");
                         Drink rootBeer = new Drink(readLine(), size);
                         order.addFoodItem(rootBeer);   
+                        foodType.add("Root Beer");
                         break;
 
                     } else if(addToCart == 'N'){
@@ -491,8 +494,8 @@ public class Main {
 
     for(int i = 0; i < foodList.size(); i++){
         System.out.println("---------");
-        if(order.getFood(i) == VeganBurger){
-
+        if(foodType.get(i).equals("MorningBurger")){
+            System.out.println(foodList.get(i).getBagelBun()? "Yes":"No");
         }  
         System.out.println(foodList.get(i));
         System.out.println(foodList.get(i).getName());
