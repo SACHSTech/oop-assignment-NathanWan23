@@ -6,7 +6,7 @@ public class Main {
     static StringTokenizer st; 
     public static void main(String[] args) throws IOException{
 
-        ArrayList<String> foodType = new ArrayList<String>();
+        //ArrayList<String> foodType = new ArrayList<String>();
 
         int itemNum;
         boolean going = true; 
@@ -30,24 +30,6 @@ public class Main {
         Order order = new Order();
 
         String size = "Small";
-
-        /*
-        System.out.println("-------------------")
-        System.out.println("BURGERS");
-        System.out.println("1 | Morning Burger");
-        System.out.println("2 | Stacked Burger");
-        System.out.println("3 | Vegan Burger");
-        System.out.println("4 | Chicken Burger");
-        System.out.println("SIDES");
-        System.out.println("5 | Fries");
-        System.out.println("6 | Waffle Fries"); 
-        System.out.println("7 | Poutine");
-        System.out.println("Drinks");
-        System.out.println("8 | Fruitopea");
-        System.out.println("9 | Dr. Pepper"); 
-        System.out.println("10| Coca-Cola");
-        System.out.println("11| Root Beer");
-        System.out.println("-------------------");*/
 
         while(going == true){
             System.out.println("-------------------");
