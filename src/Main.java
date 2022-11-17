@@ -484,9 +484,9 @@ public class Main {
         System.out.println(foodList.get(i).getPrice());
     }
     System.out.println("----------");
-    System.out.println("Sub-Total:" + order.getSubTotal());
-    System.out.println("Tax:" + order.getTax());
-    System.out.println("Total:" + order.getTotalPrice());
+    System.out.println("Sub-Total: " + order.getSubTotal());
+    System.out.println("Tax: " + String.format("%.2f",order.getTax()));
+    System.out.println("Total: " + String.format("%.2f",order.getTotalPrice()));
     }
 
     static String next () throws IOException {
