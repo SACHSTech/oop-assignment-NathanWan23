@@ -29,6 +29,8 @@ public class Main {
 
         String size = "Small";
 
+        /*
+        System.out.println("-------------------")
         System.out.println("BURGERS");
         System.out.println("1 | Morning Burger");
         System.out.println("2 | Stacked Burger");
@@ -43,9 +45,11 @@ public class Main {
         System.out.println("9 | Dr. Pepper"); 
         System.out.println("10| Coca-Cola");
         System.out.println("11| Root Beer");
-        System.out.println("-------------------");
+        System.out.println("-------------------");*/
 
         while(going == true){
+            
+
         System.out.print("Enter the item you would like to view: ");
         itemNum = readInt();
 
@@ -414,7 +418,7 @@ public class Main {
                     } else error();
                           
                 }
-            } else if(itemNum == 9){
+            } else if(itemNum == 11){
                 System.out.println("Root Beer");
                 System.out.println(" - Can be size Small, Medium, or Large");
                 System.out.println("Price: Small = $1.99, Medium = $2.99, Large = $3.99");
@@ -447,7 +451,7 @@ public class Main {
 
         } else error();
         while(going  == true){
-            System.out.println("Would you like to keep ordering / browsing? (yOrN)");
+            System.out.println("Would you like to keep ordering / browsing? (Y or N)");
             yOrN = readCharacter();
             if (yOrN == 'Y'){
                 break;
@@ -459,7 +463,17 @@ public class Main {
     }
 
     ArrayList<Food> foodList = order.getFoodList(); 
-    System.out.println(foodList);
+
+    for(int i = 0; i < foodList.size(); i++){
+        System.out.println("---------");
+        System.out.println(foodList.get(i));
+        System.out.println(foodList.get(i).getName());
+        System.out.println(foodList.get(i).getPrice());
+    }
+    System.out.println("----------");
+    System.out.println("Sub-Total:" + order.getSubTotal());
+    System.out.println("Tax:" + order.getTax());
+    System.out.println("Total:" + order.getTotalPrice());
     }
 
     static String next () throws IOException {
