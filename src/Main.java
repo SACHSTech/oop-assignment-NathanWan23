@@ -120,7 +120,7 @@ public class Main {
                         System.out.println("Name for burger: ");
                         Burger morningBurger = new MorningBurger(readLine(), isBagelBun, isSausageMeat);
                         order.addFoodItem(morningBurger);
-                        foodType.add("Morning Burger");
+                        //foodType.add("Morning Burger");
                         break;
 
                     } else if(addToCart == 'N'){
@@ -159,7 +159,7 @@ public class Main {
                         System.out.println("Name for burger: ");
                         Burger stackedBurger = new StackedBurger(readLine(), buns, beef);
                         order.addFoodItem(stackedBurger);
-                        foodType.add("Stacked Burger");
+                        //foodType.add("Stacked Burger");
                         break;
 
                     } else if(addToCart == 'N'){
@@ -206,7 +206,7 @@ public class Main {
                         System.out.println("Name for burger: ");
                         Burger veganBurger = new VeganBurger(readLine(), isBeyondMeat, isLettuceBun);
                         order.addFoodItem(veganBurger);
-                        foodType.add("Vegan Burger");
+                        //foodType.add("Vegan Burger");
                         break;
 
                     } else if(addToCart == 'N'){
@@ -249,7 +249,7 @@ public class Main {
                         System.out.println("Name for burger: ");
                         Burger chickenBurger = new ChickenBurger(readLine(), isCrispy, spice);
                         order.addFoodItem(chickenBurger);
-                        foodType.add("Chicken Burger");
+                        //foodType.add("Chicken Burger");
                         break;
 
                     } else if(addToCart == 'N'){
@@ -281,7 +281,7 @@ public class Main {
                         System.out.println("Name for fries: ");
                         Sides fries = new Sides(readLine(), size);
                         order.addFoodItem(fries);   
-                        foodType.add("Fries");
+                        //foodType.add("Fries");
                         break;
 
                     } else if(addToCart == 'N'){
@@ -311,7 +311,7 @@ public class Main {
                         System.out.println("Name for waffle fries: ");
                         Sides waffleFries = new Sides(readLine(), size);
                         order.addFoodItem(waffleFries);   
-                        foodType.add("Waffle Fries");
+                        //foodType.add("Waffle Fries");
                         break;
 
                     } else if(addToCart == 'N'){
@@ -343,7 +343,7 @@ public class Main {
                         System.out.println("Name for poutine: ");
                         Sides poutine = new Sides(readLine(), size);
                         order.addFoodItem(poutine);   
-                        foodType.add("Poutine");
+                        //foodType.add("Poutine");
                         break;
 
                     } else if(addToCart == 'N'){
@@ -377,7 +377,7 @@ public class Main {
                         System.out.println("Name for Fuitopia: ");
                         Drink fruitopia = new Drink(readLine(), size);
                         order.addFoodItem(fruitopia);   
-                        foodType.add("Fruitopia");
+                        //foodType.add("Fruitopia");
                         break;
 
                     } else if(addToCart == 'N'){
@@ -407,7 +407,7 @@ public class Main {
                         System.out.println("Name for Dr. Pepper: ");
                         Drink drPepper = new Drink(readLine(), size);
                         order.addFoodItem(drPepper);   
-                        foodType.add("Dr Pepper");
+                        //foodType.add("Dr Pepper");
                         break;
 
                     } else if(addToCart == 'N'){
@@ -437,7 +437,7 @@ public class Main {
                         System.out.println("Name for Coca-Cola: ");
                         Drink cocaCola = new Drink(readLine(), size);
                         order.addFoodItem(cocaCola);   
-                        foodType.add("Coca Cola");
+                        //foodType.add("Coca Cola");
                         break;
 
                     } else if(addToCart == 'N'){
@@ -467,7 +467,7 @@ public class Main {
                         System.out.println("Name for Root Beer: ");
                         Drink rootBeer = new Drink(readLine(), size);
                         order.addFoodItem(rootBeer);   
-                        foodType.add("Root Beer");
+                        //foodType.add("Root Beer");
                         break;
 
                     } else if(addToCart == 'N'){
@@ -494,9 +494,9 @@ public class Main {
 
     for(int i = 0; i < foodList.size(); i++){
         System.out.println("---------");
-        if(foodType.get(i).equals("MorningBurger")){
+        /*if(foodType.get(i).equals("MorningBurger")){
             System.out.println(foodList.get(i).getBagelBun()? "Yes":"No");
-        }  
+        }  */
         System.out.println(foodList.get(i));
         System.out.println(foodList.get(i).getName());
         System.out.println(foodList.get(i).getPrice());
