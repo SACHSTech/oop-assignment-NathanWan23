@@ -10,8 +10,8 @@ public class Drink extends Food {
     /**
      * Constructor - creates a new instance of a drink.
      * 
-     * @param rinkName - the name for the drink
-     * @param drinkSize - the size of the drink
+     * @param String drinkName - the name for the drink
+     * @param String drinkSize - the size of the drink
      */
     public Drink(String drinkName, String drinkSize){
         super(drinkName);
