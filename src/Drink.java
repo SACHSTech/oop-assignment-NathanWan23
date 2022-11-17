@@ -1,5 +1,10 @@
+/**
+ * Drink class which extends food.
+ * @author N. Wan.
+*/
 public class Drink extends Food {
     
+    //declare variable
     String size;
 
     public Drink(String drinkName, String drinkSize){

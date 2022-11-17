@@ -4,7 +4,7 @@
 */
 public class Burger extends Food {
     
-    // Declair variables
+    // Declare variables
     String[] burgerToppings;
 
     /**

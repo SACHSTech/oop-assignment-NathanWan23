@@ -4,7 +4,7 @@
 */
 public class ChickenBurger extends Burger {
     
-    // Declair variables
+    // Declare variables
     boolean crispy;
     int spiceLevel;
 
