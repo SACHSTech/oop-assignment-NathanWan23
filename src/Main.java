@@ -22,7 +22,7 @@ public class Main {
         boolean isBagelBun = true;
         boolean isSausageMeat = true; 
 
-        char yOrNOption;
+        char yOrN;
         int numOption;
 
         System.out.println("BURGERS");
@@ -61,24 +61,24 @@ public class Main {
 
                         while(going == true){
                             System.out.println("Would you like the bagel bun? (Y or N)");
-                            yOrNOption = readCharacter();
-                            if(yOrNOption == 'Y'){
+                            yOrN = readCharacter();
+                            if(yOrN == 'Y'){
                                 isBagelBun = true; 
                                 break;
                             } 
-                            else if (yOrNOption == 'N') {
+                            else if (yOrN == 'N') {
                                 isBagelBun = false; 
                                 break;
                             } else error();
                         }
                         while(going == true){
                             System.out.println("Would you like the sausage meat? (Y or N)");
-                            yOrNOption = readCharacter();
-                            if(yOrNOption == 'Y'){
+                            yOrN = readCharacter();
+                            if(yOrN == 'Y'){
                                 isSausageMeat = true; 
                                 break;
                             } 
-                            else if (yOrNOption == 'N') {
+                            else if (yOrN == 'N') {
                                 isSausageMeat = false; 
                                 break;
                             } else error();
@@ -94,6 +94,7 @@ public class Main {
 
                         System.out.println("Name for burger: ");
                         Burger MorningBurger = new MorningBurger(readLine(), isBagelBun, isSausageMeat);
+                        Order order = new Order(MorningBurger);
                         break;
 
                     } else if(addToCart == 'N'){
@@ -223,6 +224,16 @@ public class Main {
         } else if(itemNum > 7 && itemNum < 12){
 
         } else error();
+        while(going  == true){
+            System.out.println("Would you like to keep ordering / browsing? (yOrN");
+            yOrN = readCharacter();
+            if (yOrN == 'Y'){
+                break;
+            } else if (yOrN == 'N'){
+                going = false;
+                break;
+            } else error();
+        }
     }
     }
     static String next () throws IOException {
