@@ -385,6 +385,35 @@ public class Main {
                     } else error();
                           
                 }
+            } else if(itemNum == 10){
+                System.out.println("Coca-Cola");
+                System.out.println(" - Can be size Small, Medium, or Large");
+                System.out.println("Price: Small = $1.99, Medium = $2.99, Large = $3.99");
+
+                while(going == true){
+                    System.out.println("Would you like to this add item your order? (Y or N)");
+                    addToCart = readCharacter();
+                    
+                    if(addToCart == 'Y'){
+
+                        while(going == true){
+                            System.out.println("What size would you like (Small or Medium or Large)");
+                            size = readLine();
+                            if(size.equals("Small")) break;
+                            else if (size.equals("Medium")) break;
+                            else if(size.equals("Large")) break;
+                            else error();
+                        }
+                        System.out.println("Name for Coca-Cola: ");
+                        Drink cocaCola = new Drink(readLine(), size);
+                        order.addFoodItem(cocaCola);   
+                        break;
+
+                    } else if(addToCart == 'N'){
+                        break;
+                    } else error();
+                          
+                }
             }
 
         } else error();
