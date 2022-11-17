@@ -246,7 +246,7 @@ public class Main {
                     if(addToCart == 'Y'){
 
                         while(going == true){
-                            System.out.println("What size would you like (Small or Medium or Large");
+                            System.out.println("What size would you like (Small or Medium or Large)");
                             size = readLine();
                             if(size.equals("Small")) break;
                             else if (size.equals("Medium")) break;
@@ -275,7 +275,7 @@ public class Main {
                     if(addToCart == 'Y'){
 
                         while(going == true){
-                            System.out.println("What size would you like (Small or Medium or Large");
+                            System.out.println("What size would you like (Small or Medium or Large)");
                             size = readLine();
                             if(size.equals("Small")) break;
                             else if (size.equals("Medium")) break;
@@ -306,7 +306,7 @@ public class Main {
                     if(addToCart == 'Y'){
 
                         while(going == true){
-                            System.out.println("What size would you like (Small or Medium or Large");
+                            System.out.println("What size would you like (Small or Medium or Large)");
                             size = readLine();
                             if(size.equals("Small")) break;
                             else if (size.equals("Medium")) break;
@@ -328,7 +328,63 @@ public class Main {
         } else if(itemNum > 7 && itemNum < 12){
 
             if(itemNum == 8){
+                System.out.println("Fruitopea");
+                System.out.println(" - Can be size Small, Medium, or Large");
+                System.out.println("Price: Small = $1.99, Medium = $2.99, Large = $3.99");
 
+                while(going == true){
+                    System.out.println("Would you like to this add item your order? (Y or N)");
+                    addToCart = readCharacter();
+                    
+                    if(addToCart == 'Y'){
+
+                        while(going == true){
+                            System.out.println("What size would you like (Small or Medium or Large)");
+                            size = readLine();
+                            if(size.equals("Small")) break;
+                            else if (size.equals("Medium")) break;
+                            else if(size.equals("Large")) break;
+                            else error();
+                        }
+                        System.out.println("Name for Fuitopea: ");
+                        Drink fuitopea = new Drink(readLine(), size);
+                        order.addFoodItem(fuitopea);   
+                        break;
+
+                    } else if(addToCart == 'N'){
+                        break;
+                    } else error();
+                          
+                }
+            } else if(itemNum == 9){
+                System.out.println("Dr. Pepper");
+                System.out.println(" - Can be size Small, Medium, or Large");
+                System.out.println("Price: Small = $1.99, Medium = $2.99, Large = $3.99");
+
+                while(going == true){
+                    System.out.println("Would you like to this add item your order? (Y or N)");
+                    addToCart = readCharacter();
+                    
+                    if(addToCart == 'Y'){
+
+                        while(going == true){
+                            System.out.println("What size would you like (Small or Medium or Large)");
+                            size = readLine();
+                            if(size.equals("Small")) break;
+                            else if (size.equals("Medium")) break;
+                            else if(size.equals("Large")) break;
+                            else error();
+                        }
+                        System.out.println("Name for Dr. Pepper: ");
+                        Drink drPepper = new Drink(readLine(), size);
+                        order.addFoodItem(drPepper);   
+                        break;
+
+                    } else if(addToCart == 'N'){
+                        break;
+                    } else error();
+                          
+                }
             }
 
         } else error();
