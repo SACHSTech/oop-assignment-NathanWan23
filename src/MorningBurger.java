@@ -1,5 +1,10 @@
+/**
+ * MorningBurger class file which extends Burger.
+ * @author N. Wan.
+*/
 public class MorningBurger extends Burger{
     
+    // Declare variables
     boolean bagelBun;
     boolean sausageMeat;
 
