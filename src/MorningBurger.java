@@ -21,10 +21,20 @@ public class MorningBurger extends Burger{
         this.sausageMeat = isSausageMeat; 
     }
 
+    /**
+     * Returns true or false if it is bagel bun.
+     * 
+     * @return boolean variable bagelBun, which represents if the bun is a bagel
+     */
     public boolean getBagelBun(){
         return bagelBun;
     }
 
+    /**
+     * Returns true or false if it is sausage meat instead of beef.
+     * 
+     * @return boolean variable sausageMeat, which represents if the meat is sauage or not. 
+     */
     public boolean getSausageMeat(){
         return sausageMeat;
     }
