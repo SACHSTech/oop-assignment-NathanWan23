@@ -7,6 +7,12 @@ public class Drink extends Food {
     //declare variable
     String size;
 
+    /**
+     * Constructor - creates a new instance of a drink.
+     * 
+     * @param rinkName - the name for the drink
+     * @param drinkSize - the size of the drink
+     */
     public Drink(String drinkName, String drinkSize){
         super(drinkName);
         if(drinkSize == "Small") setPrice(1.99);
