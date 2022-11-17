@@ -4,7 +4,7 @@
 */
 public class Drink extends Food {
     
-    //declare variable
+    //Declare variable
     String size;
 
     /**
@@ -15,12 +15,19 @@ public class Drink extends Food {
      */
     public Drink(String drinkName, String drinkSize){
         super(drinkName);
+
+        // Determine price with given size
         if(drinkSize == "Small") setPrice(1.99);
         else if(drinkSize == "Medium") setPrice(2.99);
         else setPrice(3.99);
         this.size = drinkSize;
     }
 
+    /**
+     * Returns string of the size
+     * 
+     * @return String size, which represents the size of the drink
+     */
     public String getSize(){
         return size;
     }
