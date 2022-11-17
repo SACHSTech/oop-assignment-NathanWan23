@@ -46,6 +46,10 @@ public abstract class Food {
         return price;
     }
 
+    /**
+     * Sets the price of the food
+     * @param double foodPrice - the price of the food item
+     */
     public void setPrice(double foodPrice){
         this.price = foodPrice;
     }
