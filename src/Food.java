@@ -1,5 +1,10 @@
+/**
+ * Abstract food class
+ * @author N. Wan.
+*/
 public abstract class Food {
     
+    // Declare variables
     private String name;
     private double price;
 
