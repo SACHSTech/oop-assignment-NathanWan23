@@ -27,6 +27,8 @@ public class Main {
 
         Order order = new Order();
 
+        String size;
+
         System.out.println("BURGERS");
         System.out.println("1 | Morning Burger");
         System.out.println("2 | Stacked Burger");
@@ -57,7 +59,7 @@ public class Main {
                 System.out.println("Price: $5.99");
 
                 while(going == true){
-                    System.out.println("Would you like to add item to order? (Y or N)");
+                    System.out.println("Would you like to this add item your order? (Y or N)");
                     addToCart = readCharacter();
                     if(addToCart == 'Y'){
 
@@ -111,7 +113,7 @@ public class Main {
                 System.out.println("Price: $12.99");
 
                 while(going == true){
-                    System.out.println("Would you like to add item to order? (Y or N)");
+                    System.out.println("Would you like to this add item your order? (Y or N)");
                     addToCart = readCharacter();
                     if(addToCart == 'Y'){
 
@@ -149,28 +151,30 @@ public class Main {
                 System.out.println("Price: $7.99");
 
                 while(going == true){
-                    System.out.println("Would you like to add item to order? (Y or N)");
+                    System.out.println("Would you like to this add item your order? (Y or N)");
                     addToCart = readCharacter();
                     if(addToCart == 'Y'){
 
                         while(going == true){
                             System.out.println("Would you like beyond meat or non-beyond meat? (Y or N)");
-                            if(readCharacter() == 'Y'){
+                            yOrN = readCharacter();
+                            if(yOrN == 'Y'){
                                 isBeyondMeat = true; 
                                 break;
                             } 
-                            else if (readCharacter() == 'N') {
+                            else if (yOrN == 'N') {
                                 isBeyondMeat = false; 
                                 break;
                             } else error();
                         }
                         while(going == true){
                             System.out.println("Would you like lettuce bun? (Y or N)");
-                            if(readCharacter() == 'Y'){
+                            yOrN = readCharacter();
+                            if(yOrN == 'Y'){
                                 isLettuceBun = true; 
                                 break;
                             } 
-                            else if (readCharacter() == 'N') {
+                            else if (yOrN == 'N') {
                                 isLettuceBun = false; 
                                 break;
                             } else error();
@@ -178,6 +182,7 @@ public class Main {
 
                         System.out.println("Name for burger: ");
                         Burger VeganBurger = new VeganBurger(readLine(), isBeyondMeat, isLettuceBun);
+                        order.addFoodItem(VeganBurger);
                         break;
 
                     } else if(addToCart == 'N'){
@@ -192,31 +197,34 @@ public class Main {
                 System.out.println("Price: $7.99");
 
                 while(going == true){
-                    System.out.println("Would you like to add item to order? (Y or N)");
+                    System.out.println("Would you like to this add item your order? (Y or N)");
                     addToCart = readCharacter();
                     if(addToCart == 'Y'){
 
                         while(going == true){
                             System.out.println("Would you like crispy or non-crispy? (Y or N)");
-                            if(readCharacter() == 'Y'){
+                            yOrN = readCharacter();
+                            if(yOrN == 'Y'){
                                 isCrispy = true; 
                                 break;
                             } 
-                            else if (readCharacter() == 'N') {
+                            else if (yOrN == 'N') {
                                 isCrispy = false; 
                                 break;
                             } else error();
                         }
                         while(going == true){
                             System.out.println("What spice level would you like? (0-3)");
-                            if(readInt() > -1 && readInt() < 4){
-                                spice = readInt();
+                            numOption = readInt();
+                            if(numOption > -1 && numOption < 4){
+                                spice = numOption;
                                 break;
                             } else error();
                         }
 
                         System.out.println("Name for burger: ");
                         Burger ChickenBurger = new ChickenBurger(readLine(), isCrispy, spice);
+                        order.addFoodItem(ChickenBurger);
                         break;
 
                     } else if(addToCart == 'N'){
@@ -225,6 +233,97 @@ public class Main {
                 }
             }
         } else if(itemNum > 4 && itemNum < 8){
+
+            if(itemNum == 5){
+                System.out.println("French Fries");
+                System.out.println(" - Can be size Small, Medium, or Large");
+                System.out.println("Price: Small = $2.99, Medium = $3.99, Large = $4.99");
+
+                while(going == true){
+                    System.out.println("Would you like to this add item your order? (Y or N)");
+                    addToCart = readCharacter();
+                    
+                    if(addToCart == 'Y'){
+
+                        while(going == true){
+                            System.out.println("What size would you like (S or M or L");
+                            size = readLine();
+                            if(size.equals("Small")) break;
+                            else if (size.equals("Medium")) break;
+                            else if(size.equals("Large")) break;
+                            else error();
+                        }
+                        System.out.println("Name for fries: ");
+                        Sides fries = new Sides(readLine(), size);
+                        order.addFoodItem(fries);   
+                        break;
+
+                    } else if(addToCart == 'N'){
+                        break;
+                    } else error();
+                          
+                }
+            } else if (itemNum == 6){
+                System.out.println("Waffle Fries");
+                System.out.println(" - Can be size Small, Medium, or Large");
+                System.out.println("Price: Small = $2.99, Medium = $3.99, Large = $4.99");
+
+                while(going == true){
+                    System.out.println("Would you like to this add item your order? (Y or N)");
+                    addToCart = readCharacter();
+                    
+                    if(addToCart == 'Y'){
+
+                        while(going == true){
+                            System.out.println("What size would you like (S or M or L");
+                            size = readLine();
+                            if(size.equals("Small")) break;
+                            else if (size.equals("Medium")) break;
+                            else if(size.equals("Large")) break;
+                            else error();
+                        }
+                        System.out.println("Name for waffle fries: ");
+                        Sides waffleFries = new Sides(readLine(), size);
+                        order.addFoodItem(waffleFries);   
+                        break;
+
+                    } else if(addToCart == 'N'){
+                        break;
+                    } else error();
+                          
+                }
+
+            } else {
+                System.out.println("Poutine");
+                System.out.println(" - Fries, Gravy, and Cheese curds");
+                System.out.println(" - Can be size Small, Medium, or Large");
+                System.out.println("Price: Small = $2.99, Medium = $3.99, Large = $4.99");
+
+                while(going == true){
+                    System.out.println("Would you like to this add item your order? (Y or N)");
+                    addToCart = readCharacter();
+                    
+                    if(addToCart == 'Y'){
+
+                        while(going == true){
+                            System.out.println("What size would you like (S or M or L");
+                            size = readLine();
+                            if(size.equals("Small")) break;
+                            else if (size.equals("Medium")) break;
+                            else if(size.equals("Large")) break;
+                            else error();
+                        }
+                        System.out.println("Name for waffle fries: ");
+                        Sides waffleFries = new Sides(readLine(), size);
+                        order.addFoodItem(waffleFries);   
+                        break;
+
+                    } else if(addToCart == 'N'){
+                        break;
+                    } else error();
+                          
+                }
+            }
 
         } else if(itemNum > 7 && itemNum < 12){
 
