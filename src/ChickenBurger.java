@@ -1,5 +1,10 @@
+/**
+ * ChickenBurger class file which extends Burger.
+ * @author N. Wan.
+*/
 public class ChickenBurger extends Burger {
     
+    // Declair variables
     boolean crispy;
     int spiceLevel;
 
