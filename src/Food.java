@@ -8,6 +8,12 @@ public abstract class Food {
     private String name;
     private double price;
 
+    /**
+     * Constructor - creates a new instance of a food item.
+     * 
+     * @param foodName - the name of the food item
+     * @param foodPrice - the price of the food item
+     */
     public Food(String foodName, Double foodPrice){
         name = foodName;
         price = foodPrice;
