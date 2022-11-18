@@ -1,19 +1,31 @@
+/**
+ * ChickenBurger class file which extends Burger.
+ * @author N. Wan.
+*/
 public class StackedBurger extends Burger{
     
-    int bunLayers;
-    int beefPaties;
+    // Declare variables
+    int bun;
+    int paties;
 
-    public StackedBurger(String Name, int BunLayers, int BeefPaties){
-        super(Name, new String[] {"Cheese", "Ketchup", "Mayonnaise", "Bacon"}, 12.99);
-        this.bunLayers = BunLayers;
-        this.beefPaties = BeefPaties; 
+    /**
+     * Constructor - creates a new instance of a Stacked burger.
+     * 
+     * @param String name - the name of the stacked burger burger
+     * @param int bunLayer - the number of buns in the burger
+     * @param int beefPaties - the number of beef paties
+     */
+    public StackedBurger(String name, int bunLayers, int beefPaties){
+        super(name, new String[] {"Cheese", "Ketchup", "Mayonnaise", "Bacon"}, 12.99);
+        this.bun = bunLayers;
+        this.paties = beefPaties; 
     }
     
     public int getLayers(){
-        return bunLayers;
+        return bun;
     }
 
-    public int beefPaties(){
-        return beefPaties;
+    public int getBeefPaties(){
+        return paties;
     }
 }
