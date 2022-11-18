@@ -5,8 +5,8 @@
 public class MorningBurger extends Burger{
     
     // Declare variables
-    boolean bagelBun;
-    boolean sausageMeat;
+    private boolean bagelBun;
+    private boolean sausageMeat;
 
     /**
      * Constructor - creates a new instance of a burger.

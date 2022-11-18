@@ -5,7 +5,7 @@
 public class Burger extends Food {
     
     // Declare variables
-    String[] burgerToppings;
+    private String[] burgerToppings;
 
     /**
      * Constructor - creates a new instance of a burger.

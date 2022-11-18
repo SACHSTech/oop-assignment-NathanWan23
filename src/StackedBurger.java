@@ -5,8 +5,8 @@
 public class StackedBurger extends Burger{
     
     // Declare variables
-    int bun;
-    int paties;
+    private int bun;
+    private int paties;
 
     /**
      * Constructor - creates a new instance of a Stacked burger.

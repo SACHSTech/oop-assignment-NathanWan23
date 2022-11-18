@@ -5,7 +5,7 @@
 public class Drink extends Food {
     
     //Declare variable
-    String size;
+    private String size;
 
     /**
      * Constructor - creates a new instance of a drink.

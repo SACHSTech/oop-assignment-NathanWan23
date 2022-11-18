@@ -5,8 +5,8 @@
 public class VeganBurger extends Burger{
     
     // Declare variables
-    boolean beyondMeat;
-    boolean lettuceBun;
+    private boolean beyondMeat;
+    private boolean lettuceBun;
 
     /**
      * Constructor - creates a new instance of a vegan burger.

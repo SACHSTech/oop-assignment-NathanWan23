@@ -5,8 +5,8 @@
 public class ChickenBurger extends Burger {
     
     // Declare variables
-    boolean crispy;
-    int spiceLevel;
+    private boolean crispy;
+    private int spiceLevel;
 
     /**
      * Constructor - creates a new instance of a burger.

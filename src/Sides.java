@@ -5,7 +5,7 @@
 public class Sides extends Food{
 
     // Declare variables
-    String size;
+    private String size;
 
     /**
      * Constructor - creates a new instance of a side.

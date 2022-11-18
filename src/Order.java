@@ -8,9 +8,9 @@ import java.io.*;
 public class Order {
  
     // Declare variables
-    ArrayList<Food> foodList = new ArrayList<Food>();
-    int num;
-    double subTotal;
+    private ArrayList<Food> foodList = new ArrayList<Food>();
+    private int num;
+    private double subTotal;
     
 
     /**
