@@ -1,5 +1,5 @@
 /**
- * ChickenBurger class file which extends Burger.
+ * StackedBurger class file which extends Burger.
  * @author N. Wan.
 */
 public class StackedBurger extends Burger{
@@ -21,10 +21,20 @@ public class StackedBurger extends Burger{
         this.paties = beefPaties; 
     }
     
+    /**
+     * Returns number of bun layers.
+     * 
+     * @return int variable bun, which represents number of bun layers
+     */
     public int getLayers(){
         return bun;
     }
 
+    /**
+     * Returns the number of beef paties.
+     * 
+     * @return int variable paties, which represents number of beef paties 
+     */
     public int getBeefPaties(){
         return paties;
     }
