@@ -7,7 +7,12 @@ public class Sides extends Food{
     // Declare variables
     String size;
 
-    
+    /**
+     * Constructor - creates a new instance of a side.
+     * 
+     * @param String name - the name for the side
+     * @param String sideSize - the size of the side
+     */
     public Sides(String name, String sideSize){
         super(name);
         if(sideSize == "Small") setPrice(2.99);
