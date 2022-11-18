@@ -21,6 +21,11 @@ public class Sides extends Food{
         this.size = sideSize;
     }
 
+     /**
+     * Returns string of the size
+     * 
+     * @return String size, which represents the size of the side
+     */
     public String getSize(){
         return size;
     }
