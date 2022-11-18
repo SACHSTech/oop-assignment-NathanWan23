@@ -538,27 +538,48 @@ public class Main {
     System.out.println("Total: $" + String.format("%.2f",order.getTotalPrice()));
     }
 
+    /**
+     * Used to create readInt, readCharacter, and readLine
+     * 
+     * @return st, the next token from the st
+     */
     static String next () throws IOException {
         while (st == null || ! st.hasMoreTokens())
             st = new StringTokenizer(br.readLine().trim());
         return st.nextToken();
     }
-    static long readLong () throws IOException {
-        return Long.parseLong(next());
-    }
+
+
+    /**
+     * Used to read number
+     * 
+     * @return int number
+     */
     static int readInt () throws IOException {
         return Integer.parseInt(next());
     }
-    static double readDouble () throws IOException {
-        return Double.parseDouble(next());
-    }
+
+    /**
+     * Used to read character
+     * 
+     * @return char character
+     */
     static char readCharacter () throws IOException {
         return next().charAt(0);
     }  
+
+    /**
+     * Used to read Line
+     * 
+     * @return String line
+     */
     static String readLine () throws IOException {
         return br.readLine().trim();
     }
 
+    /**
+     * Used to write error message when the user inputs a value that its not supposed to input
+     */
     static void error(){
         System.out.println("Error. Please enter again.");
     }
