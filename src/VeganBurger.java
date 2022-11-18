@@ -21,10 +21,20 @@ public class VeganBurger extends Burger{
         this.lettuceBun = isLettuceBun; 
     }
 
+    /**
+     * Returns if it is beyond meat.
+     * 
+     * @return boolean beyondMeat - which represents if it is beyond meat
+     */
     public boolean getBeyondMeat(){
         return beyondMeat;
     }
     
+    /**
+     * Returns if it is lettuce bun.
+     * 
+     * @return boolean variable lettuceBun, which represents if it a lettuce bun
+     */
     public boolean getLettuceBun(){
         return lettuceBun;
     }
